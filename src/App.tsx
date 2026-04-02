@@ -1,5 +1,5 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router";
-import Simon from "./pages/Simon";
+import Home from "./pages/Home";
 
 function App() {
   return (
@@ -7,7 +7,7 @@ function App() {
     <div className="font-['Inter']">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Simon />} />
+          <Route path="/" element={<Home />} />
           <Route path="/*" element={<Navigate to={"/"} />} />
         </Routes>
       </BrowserRouter>
