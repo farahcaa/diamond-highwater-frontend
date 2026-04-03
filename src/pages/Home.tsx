@@ -5,18 +5,15 @@ import { Badge } from "@/components/ui/badge";
 import {
   PhoneCall,
   CloudLightning,
-  ShieldCheck,
   BarChart3,
   MapPinned,
-  Users,
   CheckCircle2,
   ArrowRight,
   CalendarDays,
   FileCheck,
-  Zap,
-  MessageSquareMore,
 } from "lucide-react";
 import RainBackground from "./RainBackground";
+import { useNavigate } from "react-router";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -81,6 +78,7 @@ const benefits = [
   "A real marketing partner instead of just a list seller",
 ];
 export default function Home() {
+  const navigate = useNavigate();
   return (
     <RainBackground>
       <div className="min-h-screen bg-[#070b12] text-white opacity-70">
@@ -92,7 +90,7 @@ export default function Home() {
             <div className="flex items-center justify-between">
               <div>
                 <div className="text-xl font-semibold tracking-wide text-white">
-                  DHP
+                  Farah Marketing
                 </div>
                 <div className="text-sm text-[rgba(226,232,240,0.75)]">
                   Storm Campaigns for Roofing Companies
@@ -103,12 +101,18 @@ export default function Home() {
                 <Button
                   variant="ghost"
                   className="rounded-2xl text-[rgba(226,232,240,0.85)] hover:bg-[rgba(255,255,255,0.08)]"
+                  onClick={() => navigate("/#how-it-works")}
                 >
                   How It Works
                 </Button>
 
                 <Button className="rounded-2xl bg-white text-black hover:bg-white/90">
-                  Book a Call
+                  <a
+                    className="flex items-center"
+                    href="https://calendar.app.google/MWZhAuWvo6jKJHJj7"
+                  >
+                    Book a Call
+                  </a>
                 </Button>
               </div>
             </div>
@@ -140,12 +144,18 @@ export default function Home() {
 
               <div className="mt-8 flex flex-wrap gap-4">
                 <Button className="rounded-2xl bg-white text-black hover:bg-white/90">
-                  Start a Campaign <ArrowRight className="ml-2 h-4 w-4" />
+                  <a
+                    className="flex items-center"
+                    href="mailto:isaacfarah33@gmail.com"
+                  >
+                    Start a Campaign <ArrowRight className="ml-2 h-4 w-4" />
+                  </a>
                 </Button>
 
                 <Button
                   variant="outline"
                   className="rounded-2xl border-[rgba(255,255,255,0.15)] bg-[rgba(255,255,255,0.08)] text-white hover:bg-[rgba(255,255,255,0.12)]"
+                  onClick={() => navigate("/#how-it-works")}
                 >
                   See How It Works
                 </Button>
@@ -276,8 +286,10 @@ export default function Home() {
               </div>
 
               <Button className="bg-black text-white">
-                <PhoneCall className="mr-2 h-4 w-4" />
-                Schedule a Call
+                <a href="tel:3179876361" className="flex items-center">
+                  <PhoneCall className="mr-2 h-4 w-4" />
+                  Schedule a Call
+                </a>
               </Button>
             </CardContent>
           </Card>
