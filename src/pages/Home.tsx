@@ -286,7 +286,10 @@ export default function Home() {
               </div>
 
               <Button className="bg-black text-white">
-                <a href="tel:3179876361" className="flex items-center">
+                <a
+                  href="https://calendar.app.google/MWZhAuWvo6jKJHJj7"
+                  className="flex items-center"
+                >
                   <PhoneCall className="mr-2 h-4 w-4" />
                   Schedule a Call
                 </a>
