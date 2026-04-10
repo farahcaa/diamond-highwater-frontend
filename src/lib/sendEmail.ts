@@ -18,8 +18,8 @@ export async function sendEmail({
   message,
   apiUrl = (import.meta as any).env.VITE_EMAIL_API_URL ??
     "https://util-api.chris-farah.com/api/email/send",
-  clientId = "farahproperty",
-  clientSecret = "farahproperty",
+  clientId = "farahmarketing",
+  clientSecret = "farahmarketing",
 }: {
   name: string;
   email?: string;
